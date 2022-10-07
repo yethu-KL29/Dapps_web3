@@ -14,6 +14,7 @@ contract crypto{
     string keyword;
   }
   Transfer[] public transactions;
+  
   function addtoBlockchain (address payable reciever,uint amount,string memory keyword,string memory message) public{
         count+=1;
         transactions.push(Transfer(msg.sender,reciever,message,amount,block.timestamp,keyword));
